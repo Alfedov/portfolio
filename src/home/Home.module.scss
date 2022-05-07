@@ -1,0 +1,9 @@
+.section {
+  @apply relative overflow-hidden;
+  min-height: 100vh;
+
+  .container {
+    @apply my-auto relative z-10;
+    max-width: 1000px;
+  }
+}
