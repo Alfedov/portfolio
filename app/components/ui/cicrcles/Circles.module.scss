@@ -1,0 +1,34 @@
+.circles {
+  > div {
+    @apply absolute;
+    width: 400px;
+    height: 400px;
+    animation: circleAnim 5s infinite ease-in-out;
+
+    &:first-child {
+      left: -400px;
+      top: -250px;
+      box-shadow: 160px 100px 400px rgba(78, 190, 254, 1);
+    }
+
+    &:last-child {
+      right: -400px;
+      bottom: -250px;
+      box-shadow: -160px -100px 400px rgba(78, 190, 254, 1);
+    }
+  }
+}
+
+@keyframes circleAnim {
+  0% {
+    opacity: 0.25;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 0.25;
+  }
+}

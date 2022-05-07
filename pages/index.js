@@ -1,18 +1,20 @@
-import Home from "../src/home/Home";
-import axios from "axios";
+import axios from 'axios'
+import Home from '../app/components/screens/home/Home'
+import { API_URL } from '../app/constants'
 
-export default function HomePages(props) {
-  return <Home />;
+export default function HomePage(props) {
+	return <Home {...props} />
 }
-const API_URL = "http://localhost:3000/api";
-export const getStaticProps = async () => {
-  const links = await axios.get(`${API_URL}/links`).then(({ data }) => data);
-  const me = await axios.get(`${API_URL}/me`).then(({ data }) => data);
 
-  return {
-    props: {
-      links, me
-    },
-    revalidate: 60
-  };
-};
+export const getStaticProps = async () => {
+	const links = await axios.get(`${API_URL}/links`).then(({ data }) => data)
+	const me = await axios.get(`${API_URL}/me`).then(({ data }) => data)
+
+	return {
+		props: {
+			links,
+			me
+		},
+		revalidate: 60
+	}
+}
