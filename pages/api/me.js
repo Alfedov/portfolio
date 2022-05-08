@@ -1,5 +1,5 @@
 const me = {
-  siteName: "Red Links",
+  siteName: "ParkerDev",
   avatar: "/avatar.jpeg",
   description:
     "<p>Меня зовут Артём, я уже 2 года занимаюсь веб-разработкой.</p>" +
